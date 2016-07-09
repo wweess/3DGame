@@ -3,9 +3,11 @@ package com.kob.a3dgame.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
@@ -28,6 +30,16 @@ String url="http://bbs.3dmgame.com/forum.php";
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                 view.loadUrl(url);
                 return true;
+            }
+        });
+        //掌控网页的加载进度
+        webView.setWebChromeClient(new WebChromeClient() {
+
+            //获得网页的标题信息
+            @Override
+            public void onReceivedTitle(WebView view, String title) {
+                super.onReceivedTitle(view, title);
+                Log.i("aaa", title);
             }
         });
 
