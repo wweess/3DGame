@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kob.a3dgame.MainActivity">
+<FrameLayout
+    android:id="@+id/main_framelayout_top_fl"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"></FrameLayout>
+    <RadioGroup
+        android:id="@+id/main_booton_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/black"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RadioButton
+            android:id="@+id/main_booton_rg_rb1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:drawableTop="@drawable/main_booton_chapter"
+            android:gravity="center"
+            android:text="文章"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/main_booton_rg_rb2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:drawableTop="@drawable/main_booton_forum"
+            android:gravity="center"
+            android:text="论坛"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/main_booton_rg_rb3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:clickable="true"
+            android:drawableTop="@drawable/main_booton_game"
+            android:gravity="center"
+            android:text="游戏"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+</LinearLayout>

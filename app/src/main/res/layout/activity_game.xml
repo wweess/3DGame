@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.GameFragment">
+<TextView
+    android:id="@+id/game_fragment_tv"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:gravity="right"
+    android:text="按照游戏类型查找:"
+    android:textSize="16sp"/>
+    <Spinner
+        android:id="@+id/game_fragment_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/game_fragment_tv"
+        android:layout_alignParentRight="true"
+
+        />
+    <com.handmark.pulltorefresh.library.PullToRefreshGridView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_grid"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="1dp"
+        android:horizontalSpacing="1dp"
+        android:columnWidth="100dp"
+        android:layout_below="@id/game_fragment_tv"
+        android:stretchMode="columnWidth"
+        android:gravity="fill"
+        ptr:ptrMode="both"
+        />
+</RelativeLayout>
