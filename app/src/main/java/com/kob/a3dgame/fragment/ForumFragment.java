@@ -23,8 +23,10 @@ String url="http://bbs.3dmgame.com/forum.php";
         webView=(WebView)view.findViewById(R.id.forume_fragment_webview);
         //加载网页
         webView.loadUrl(url);
+        Log.i("pppp",url);
         //让我们的WebView隐藏起来
         webView.setVisibility(View.INVISIBLE);
+
         webView.setWebViewClient(new WebViewClient() {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
