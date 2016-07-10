@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+<WebView
+    android:id="@+id/article_activity_webview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+
+    />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@drawable/article_page_bottom_layout_bg">
+        <Button
+            android:id="@+id/article_acivity_sx"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:text="刷新"/>
+        <ImageButton
+            android:id="@+id/article_acivity_syy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/article_previouse_btn_bg"
+            android:state_checked="false"
+            android:scaleType="center"
+            android:background="@android:color/white"/>
+        <EditText
+            android:id="@+id/article_acivity_et"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            />
+        <ImageButton
+            android:id="@+id/article_acivity_xyy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:src="@drawable/article_next_bg"
+            android:state_checked="false"
+            android:scaleType="center"
+            android:background="@android:color/white"/>
+        <Button
+            android:id="@+id/article_acivity_xq"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:text="详情"/>
+    </LinearLayout>
+</LinearLayout>

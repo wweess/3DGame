@@ -1,5 +1,6 @@
 package com.kob.a3dgame.fragment;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +15,7 @@ import android.widget.ListView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
 import com.handmark.pulltorefresh.library.PullToRefreshListView;
+import com.kob.a3dgame.ArticleActivity;
 import com.kob.a3dgame.R;
 import com.kob.a3dgame.adapter.ChapterContentPullToRefreshAdapter;
 import com.kob.a3dgame.adapter.MainViewPagerFragmentAdapter;
@@ -61,6 +63,7 @@ private GameDao gamedao;
         mListItems = new ArrayList<>();
         GetDataTask task =new GetDataTask();
         task.execute(url);
+//        mPullRefreshListView.addView(mafvp);
         lv=mPullRefreshListView.getRefreshableView();
         Log.i("ppppp", "onCreateView: "+mListItems.toString());
 
@@ -70,7 +73,11 @@ private GameDao gamedao;
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                GetDataTask task =new GetDataTask();task.execute(url);
+                String url= (String) mListItems.get(position).get("arcurl");
+                Intent intent=new Intent(getContext(), ArticleActivity.class);
+                Log.i("ppppp", "onItemSelected: "+url);
+                intent.putExtra("url",url);
+                startActivity(intent);
             }
         });
 

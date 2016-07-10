@@ -131,11 +131,24 @@ spinner.setAdapter(adapter);
         mGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String url= (String) mListItems.get(position).get("arcurl");
+                String arcurl= (String) mListItems.get(position).get("arcurl");
+                String title=(String)mListItems.get(position).get("title");
+                String tid=(String)mListItems.get(position).get("tid");
+                String terrace=(String)mListItems.get(position).get("terrace");
+                String description=(String)mListItems.get(position).get("description");
+                String writer=(String)mListItems.get(position).get("writer");
+                String litpic=(String)mListItems.get(position).get("litpic");
+
                 Intent intent=new Intent(getContext(), GameWebViewActivity.class);
-                Log.i("ppppp", "onItemSelected: "+url);
-                intent.putExtra("url",url);
-                intent.setAction("game_webview_intent");
+
+                intent.putExtra("arcurl",arcurl);
+                intent.putExtra("title",title);
+                intent.putExtra("tid",tid);
+                intent.putExtra("terrace",terrace);
+                intent.putExtra("description",description);
+                intent.putExtra("writer",writer);
+                intent.putExtra("litpic",litpic);
+//                intent.setAction("game_webview_intent");
                 startActivity(intent);
             }
         });

@@ -29,7 +29,9 @@
                 <action android:name="game_webview_intent" />
             </intent-filter>
         </activity>
-        <activity android:name=".ForumFragmentActivity"></activity>
+        <activity android:name=".ForumFragmentActivity" />
+        <activity android:name=".MainCaptainActivity" />
+        <activity android:name=".ArticleActivity"></activity>
     </application>
 
 </manifest>

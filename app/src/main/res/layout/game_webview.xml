@@ -2,20 +2,51 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-        <ProgressBar
-            android:id="@+id/game_webview_frame_pb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="?android:attr/progressBarStyleLarge"/>
-    </FrameLayout>
-<WebView
-    android:id="@+id/game_webview_wv"
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:layout_weight="1"
+      android:orientation="horizontal">
+      <ImageView
+          android:id="@+id/game_fragment_xq_iv"
+          android:layout_width="150dp"
+          android:layout_height="match_parent"
+          android:src="@drawable/game_initdata_product_default1"/>
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:orientation="vertical">
+     <TextView
+         android:id="@+id/game_fragment_xq_name"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"/>
+     <TextView
+         android:id="@+id/game_fragment_xq_terrace"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"/>
+     <TextView
+         android:id="@+id/game_fragment_xq_tid"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"/>
+     <TextView
+         android:id="@+id/game_fragment_xq_arcurl"
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"/>
+ </LinearLayout>
+  </LinearLayout>
+<TextView
+    android:id="@+id/game_fragment_xq_tv1"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="0dp"
+    android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/game_fragment_xq_tv2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
-</WebView>
 </LinearLayout>
